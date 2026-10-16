@@ -20,6 +20,14 @@ class UpdateSponsor
             $sponsor->name = $dto->name;
         }
 
+        if ($dto->label !== null) {
+            $sponsor->label = $dto->label;
+        }
+
+        if ($dto->url !== null) {
+            $sponsor->url = $dto->url;
+        }
+
         if ($dto->idSponsorCategory !== null) {
             $sponsor->id_sponsor_category = $dto->idSponsorCategory;
         }

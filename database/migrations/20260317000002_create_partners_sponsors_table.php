@@ -16,6 +16,8 @@ final class CreatePartnersSponsorsTable extends AbstractMigration
         $table->addColumn('id', 'biginteger', ['identity' => true, 'signed' => false])
             ->addColumn('uuid', 'string', ['limit' => 36])
             ->addColumn('name', 'string', ['limit' => 255])
+            ->addColumn('label', 'string', ['limit' => 255, 'null' => true, 'default' => null])
+            ->addColumn('url', 'string', ['limit' => 2048, 'null' => true, 'default' => null])
             ->addColumn('id_sponsor_category', 'biginteger', ['signed' => false, 'null' => true, 'default' => null])
             ->addColumn('metadata', 'text', ['null' => true, 'default' => null])
             ->addTimestamps()
