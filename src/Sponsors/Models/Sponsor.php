@@ -15,6 +15,8 @@ use Marktic\Partners\AbstractBase\Models\PartnersRecord;
  * @property int    $id
  * @property string $uuid
  * @property string $name
+ * @property string|null $label
+ * @property string|null $url
  * @property int    $id_sponsor_category
  * @property array  $metadata
  */

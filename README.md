@@ -15,6 +15,7 @@ composer require marktic/partners
 
 - **Sponsor** management: Create, update, delete, and list sponsors
 - **SponsorCategory** management: Organize sponsors into categories
+- Sponsor labels and URLs for linkable logo display
 - Metadata support on sponsors (flexible JSON/array field)
 - Filter sponsors by category
 - Database migrations via Phinx
@@ -50,8 +51,10 @@ use Marktic\Partners\Sponsors\Dto\CreateSponsorDto;
 $action = new CreateSponsor();
 $sponsor = $action->handle(new CreateSponsorDto(
     name: 'Acme Corp',
+    label: 'Acme',
+    url: 'https://acme.com',
     idSponsorCategory: $category->id,
-    metadata: ['website' => 'https://acme.com'],
+    metadata: ['logo' => 'https://acme.com/logo.png'],
 ));
 ```
 
