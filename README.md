@@ -15,6 +15,8 @@ composer require marktic/partners
 
 - **Partner** management: Create, update, delete, and list partners
 - **Category** management: Organize partners into categories
+- **Site** management: Group partner categories and items per site
+- **Site item** linking: Attach a partner to a site + category with a site-specific label
 - Partner labels and URLs for linkable logo display
 - Metadata support on partners (flexible JSON/array field)
 - Filter partners by category
@@ -93,7 +95,9 @@ $action->handle($partner);
 | Table | Description |
 |-------|-------------|
 | `mkt_partners_partners` | Partners with uuid, name, metadata, and category FK |
-| `mkt_partners_categories` | Partner categories |
+| `mkt_partners_categories` | Partner categories (optionally linked to a site via `id_site`) |
+| `mkt_partners_sites` | Site groups for partner data |
+| `mkt_partners_site_items` | Links partner + site + category with a site-specific label |
 
 ## License
 
