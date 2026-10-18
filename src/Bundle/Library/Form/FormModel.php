@@ -18,13 +18,4 @@ abstract class FormModel extends \Nip\Form\FormModel
         $this->addClass('form-horizontal');
         $this->addClass('row-mb-3');
     }
-
-    public function submited()
-    {
-        if (false === parent::submited()) {
-            return false;
-        }
-
-        return isset($_REQUEST['_trigger']) && $_REQUEST['_trigger'] == $this->getElement('_trigger')->getValue();
-    }
 }

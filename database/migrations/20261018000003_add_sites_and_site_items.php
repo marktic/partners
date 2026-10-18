@@ -33,14 +33,14 @@ final class AddSitesAndSiteItems extends AbstractMigration
             ->addColumn('id_partner', 'biginteger', ['signed' => false])
             ->addColumn('id_site', 'biginteger', ['signed' => false])
             ->addColumn('id_category', 'biginteger', ['signed' => false])
-            ->addColumn('label', 'string', ['limit' => 255])
+            ->addColumn('label', 'string', ['limit' => 255, 'null' => false])
             ->addTimestamps()
             ->addIndex(['id_partner'])
             ->addIndex(['id_site'])
             ->addIndex(['id_category'])
             ->addForeignKey('id_partner', 'mkt_partners_partners', 'id', ['delete' => 'CASCADE', 'update' => 'NO_ACTION'])
             ->addForeignKey('id_site', 'mkt_partners_sites', 'id', ['delete' => 'CASCADE', 'update' => 'NO_ACTION'])
-            ->addForeignKey('id_category', 'mkt_partners_categories', 'id', ['delete' => 'CASCADE', 'update' => 'NO_ACTION'])
+            ->addForeignKey('id_category', 'mkt_partners_categories', 'id', ['delete' => 'RESTRICT', 'update' => 'NO_ACTION'])
             ->create();
     }
 }

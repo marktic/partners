@@ -15,6 +15,8 @@ trait SiteItemsControllerTrait
         $items->loadRelation('partner');
         $items->loadRelation('site');
         $items->loadRelation('category');
+
+        return $items;
     }
 
     protected function getModelFormClass($model, $action = null): string
