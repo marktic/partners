@@ -6,8 +6,8 @@ namespace Marktic\Partners\Utility;
 
 use ByTIC\PackageBase\Utility\ModelFinder;
 use Marktic\Partners\PartnersServiceProvider;
-use Marktic\Partners\SponsorCategories\Models\SponsorCategories;
-use Marktic\Partners\Sponsors\Models\Sponsors;
+use Marktic\Partners\Categories\Models\Categories;
+use Marktic\Partners\Partners\Models\Partners;
 use Nip\Records\RecordManager;
 
 /**
@@ -15,43 +15,43 @@ use Nip\Records\RecordManager;
  */
 class PartnersModels extends ModelFinder
 {
-    public const SPONSORS = 'sponsors';
-    public const SPONSOR_CATEGORIES = 'sponsor_categories';
+    public const PARTNERS = 'partners';
+    public const CATEGORIES = 'categories';
 
     /**
-     * @return Sponsors|RecordManager
+     * @return Partners|RecordManager
      */
-    public static function sponsors(): Sponsors|RecordManager
+    public static function partners(): Partners|RecordManager
     {
-        return static::getModels(self::SPONSORS, Sponsors::class);
+        return static::getModels(self::PARTNERS, Partners::class);
     }
 
-    public static function sponsorsClass(): string
+    public static function partnersClass(): string
     {
-        return static::getModelsClass(self::SPONSORS, Sponsors::class);
+        return static::getModelsClass(self::PARTNERS, Partners::class);
     }
 
-    public static function sponsorsTable(): string
+    public static function partnersTable(): string
     {
-        return static::getTable(self::SPONSORS, Sponsors::class);
+        return static::getTable(self::PARTNERS, Partners::class);
     }
 
     /**
-     * @return SponsorCategories|RecordManager
+     * @return Categories|RecordManager
      */
-    public static function sponsorCategories(): SponsorCategories|RecordManager
+    public static function categories(): Categories|RecordManager
     {
-        return static::getModels(self::SPONSOR_CATEGORIES, SponsorCategories::class);
+        return static::getModels(self::CATEGORIES, Categories::class);
     }
 
-    public static function sponsorCategoriesClass(): string
+    public static function categoriesClass(): string
     {
-        return static::getModelsClass(self::SPONSOR_CATEGORIES, SponsorCategories::class);
+        return static::getModelsClass(self::CATEGORIES, Categories::class);
     }
 
-    public static function sponsorCategoriesTable(): string
+    public static function categoriesTable(): string
     {
-        return static::getTable(self::SPONSOR_CATEGORIES, SponsorCategories::class);
+        return static::getTable(self::CATEGORIES, Categories::class);
     }
 
     protected static function packageName(): string

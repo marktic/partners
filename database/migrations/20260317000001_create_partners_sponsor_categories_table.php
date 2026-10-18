@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 use Phinx\Migration\AbstractMigration;
 
-final class CreatePartnersSponsorCategoriesTable extends AbstractMigration
+final class CreatePartnersCategoriesTable extends AbstractMigration
 {
     public function change(): void
     {
-        $table = $this->table('mkt_partners_sponsor_categories', [
+        $table = $this->table('mkt_partners_categories', [
             'id' => false,
             'primary_key' => 'id',
         ]);
