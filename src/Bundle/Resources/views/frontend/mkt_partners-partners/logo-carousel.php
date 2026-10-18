@@ -1,8 +1,8 @@
 <?php
 
-use Marktic\Partners\Sponsors\Models\Sponsor;
+use Marktic\Partners\Partners\Models\Partner;
 
-/** @var Sponsor[] $items */
+/** @var Partner[] $items */
 ?>
 <div class="partner-logo-carousel">
     <?php foreach ($items as $item): ?>

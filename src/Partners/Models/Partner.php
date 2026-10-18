@@ -2,25 +2,25 @@
 
 declare(strict_types=1);
 
-namespace Marktic\Partners\Sponsors\Models;
+namespace Marktic\Partners\Partners\Models;
 
 use Marktic\Partners\AbstractBase\Models\HasMetadata\RecordHasMetadataTrait;
 use Marktic\Partners\AbstractBase\Models\PartnersRecord;
 
 /**
- * Class Sponsor
+ * Class Partner
  *
- * @package Marktic\Partners\Sponsors\Models
+ * @package Marktic\Partners\Partners\Models
  *
  * @property int    $id
  * @property string $uuid
  * @property string $name
  * @property string|null $label
  * @property string|null $url
- * @property int    $id_sponsor_category
+ * @property int    $id_category
  * @property array  $metadata
  */
-class Sponsor extends PartnersRecord
+class Partner extends PartnersRecord
 {
     use RecordHasMetadataTrait;
 }

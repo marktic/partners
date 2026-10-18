@@ -3,7 +3,7 @@
 [![Latest Version](https://img.shields.io/github/v/release/marktic/partners)](https://github.com/marktic/partners/releases)
 [![License](https://img.shields.io/github/license/marktic/partners)](LICENSE)
 
-Sponsorship management package for Marktic SaaS applications.
+Partnership management package for Marktic SaaS applications.
 
 ## Installation
 
@@ -13,11 +13,11 @@ composer require marktic/partners
 
 ## Features
 
-- **Sponsor** management: Create, update, delete, and list sponsors
-- **SponsorCategory** management: Organize sponsors into categories
-- Sponsor labels and URLs for linkable logo display
-- Metadata support on sponsors (flexible JSON/array field)
-- Filter sponsors by category
+- **Partner** management: Create, update, delete, and list partners
+- **Category** management: Organize partners into categories
+- Partner labels and URLs for linkable logo display
+- Metadata support on partners (flexible JSON/array field)
+- Filter partners by category
 - Database migrations via Phinx
 - Laravel-friendly via service provider
 
@@ -32,71 +32,68 @@ composer require marktic/partners
 ],
 ```
 
-### Creating a Sponsor Category
+### Creating a Partner Category
 
 ```php
-use Marktic\Partners\SponsorCategories\Actions\CreateSponsorCategory;
-use Marktic\Partners\SponsorCategories\Dto\CreateSponsorCategoryDto;
+use Marktic\Partners\Categories\Actions\CreateCategory;
 
-$action = new CreateSponsorCategory();
-$category = $action->handle(new CreateSponsorCategoryDto(name: 'Gold'));
+$action = new CreateCategory();
+$category = $action->handle('Gold');
 ```
 
-### Creating a Sponsor
+### Creating a Partner
 
 ```php
-use Marktic\Partners\Sponsors\Actions\CreateSponsor;
-use Marktic\Partners\Sponsors\Dto\CreateSponsorDto;
+use Marktic\Partners\Partners\Actions\CreatePartner;
 
-$action = new CreateSponsor();
-$sponsor = $action->handle(new CreateSponsorDto(
+$action = new CreatePartner();
+$partner = $action->handle(
     name: 'Acme Corp',
     label: 'Acme',
     url: 'https://acme.com',
-    idSponsorCategory: $category->id,
+    idCategory: $category->id,
     metadata: ['logo' => 'https://acme.com/logo.png'],
-));
+);
 ```
 
-### Listing Sponsors
+### Listing Partners
 
 ```php
-use Marktic\Partners\Sponsors\Actions\ListSponsors;
+use Marktic\Partners\Partners\Actions\ListPartners;
 
-$action = new ListSponsors();
+$action = new ListPartners();
 
-// All sponsors
+// All partners
 $all = $action->handle();
 
-// Sponsors by category
+// Partners by category
 $gold = $action->handle(categoryId: $category->id);
 ```
 
-### Updating a Sponsor
+### Updating a Partner
 
 ```php
-use Marktic\Partners\Sponsors\Actions\UpdateSponsor;
-use Marktic\Partners\Sponsors\Dto\UpdateSponsorDto;
+use Marktic\Partners\Partners\Actions\UpdatePartner;
 
-$action = new UpdateSponsor();
-$sponsor = $action->handle($sponsor, new UpdateSponsorDto(name: 'Acme Corp Updated'));
+$action = new UpdatePartner();
+$partner = $action->handle($partner, name: 'Acme Corp Updated');
 ```
 
-### Deleting a Sponsor
+### Deleting a Partner
 
 ```php
-use Marktic\Partners\Sponsors\Actions\DeleteSponsor;
+use Marktic\Partners\Partners\Actions\DeletePartner;
 
-$action = new DeleteSponsor();
-$action->handle($sponsor);
+$action = new DeletePartner();
+$action->handle($partner);
 ```
 
 ## Database Tables
 
 | Table | Description |
 |-------|-------------|
-| `mkt_partners_sponsors` | Sponsors with uuid, name, metadata, and category FK |
-| `mkt_partners_sponsor_categories` | Sponsor categories |
+| `mkt_partners_partners` | Partners with uuid, name, metadata, and category FK |
+| `mkt_partners_categories` | Partner categories |
 
 ## License
 

@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Marktic\Partners\SponsorCategories\Models;
+namespace Marktic\Partners\Partners\Models;
 
 use Marktic\Partners\AbstractBase\Models\PartnersRepository;
 use Marktic\Partners\Utility\PackageConfig;
 
 /**
- * Class SponsorCategories
+ * Class Partners
  *
- * @package Marktic\Partners\SponsorCategories\Models
+ * @package Marktic\Partners\Partners\Models
  */
-class SponsorCategories extends PartnersRepository
+class Partners extends PartnersRepository
 {
-    public const TABLE = 'mkt_partners_sponsor_categories';
-    public const CONTROLLER = 'mkt_partners-sponsor-categories';
+    public const TABLE = 'mkt_partners_partners';
+    public const CONTROLLER = 'mkt_partners-partners';
 
     public function getTable(): string
     {

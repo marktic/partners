@@ -9,7 +9,7 @@ use Nip\Controllers\Response\ResponsePayload;
 /**
  * @method ResponsePayload payload()
  */
-trait SponsorsControllerTrait
+trait PartnersControllerTrait
 {
     public function index()
     {

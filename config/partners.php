@@ -1,17 +1,17 @@
 <?php
 
-use Marktic\Partners\SponsorCategories\Models\SponsorCategories;
-use Marktic\Partners\Sponsors\Models\Sponsors;
+use Marktic\Partners\Categories\Models\Categories;
+use Marktic\Partners\Partners\Models\Partners;
 use Marktic\Partners\Utility\PartnersModels;
 
 return [
     'models' => [
-        PartnersModels::SPONSORS => Sponsors::class,
-        PartnersModels::SPONSOR_CATEGORIES => SponsorCategories::class,
+        PartnersModels::PARTNERS => Partners::class,
+        PartnersModels::CATEGORIES => Categories::class,
     ],
     'tables' => [
-        PartnersModels::SPONSORS => Sponsors::TABLE,
-        PartnersModels::SPONSOR_CATEGORIES => SponsorCategories::TABLE,
+        PartnersModels::PARTNERS => Partners::TABLE,
+        PartnersModels::CATEGORIES => Categories::TABLE,
     ],
     'database' => [
         'connection' => 'main',

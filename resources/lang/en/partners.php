@@ -1,22 +1,22 @@
 <?php
 
 return [
-    'sponsor' => [
-        'singular' => 'Sponsor',
-        'plural' => 'Sponsors',
+    'partner' => [
+        'singular' => 'Partner',
+        'plural' => 'Partners',
         'fields' => [
             'id' => 'ID',
             'uuid' => 'UUID',
             'name' => 'Name',
             'metadata' => 'Metadata',
-            'id_sponsor_category' => 'Category',
+            'id_category' => 'Category',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ],
     ],
-    'sponsor_category' => [
-        'singular' => 'Sponsor Category',
-        'plural' => 'Sponsor Categories',
+    'partner_category' => [
+        'singular' => 'Partner Category',
+        'plural' => 'Partner Categories',
         'fields' => [
             'id' => 'ID',
             'name' => 'Name',
