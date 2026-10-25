@@ -48,32 +48,16 @@ return [
             'updated_at' => 'Updated At',
         ],
     ],
-    'mkt_partners-partners' => [
-        'labels' => [
-            'title' => 'Partners',
-            'title.singular' => 'Partner',
-            'add' => 'Add partner',
-        ],
-    ],
-    'mkt_partners-categories' => [
-        'labels' => [
-            'title' => 'Partner Categories',
-            'title.singular' => 'Partner Category',
-            'add' => 'Add category',
-        ],
-    ],
-    'mkt_partners-sites' => [
-        'labels' => [
-            'title' => 'Partner Sites',
-            'title.singular' => 'Partner Site',
-            'add' => 'Add site',
-        ],
-    ],
-    'mkt_partners-site-items' => [
-        'labels' => [
-            'title' => 'Partner Site Items',
-            'title.singular' => 'Partner Site Item',
-            'add' => 'Add site item',
-        ],
-    ],
+    'mkt_partners-partners.labels.title' => 'Partners',
+    'mkt_partners-partners.labels.title.singular' => 'Partner',
+    'mkt_partners-partners.labels.add' => 'Add partner',
+    'mkt_partners-categories.labels.title' => 'Partner Categories',
+    'mkt_partners-categories.labels.title.singular' => 'Partner Category',
+    'mkt_partners-categories.labels.add' => 'Add category',
+    'mkt_partners-sites.labels.title' => 'Partner Sites',
+    'mkt_partners-sites.labels.title.singular' => 'Partner Site',
+    'mkt_partners-sites.labels.add' => 'Add site',
+    'mkt_partners-site-items.labels.title' => 'Partner Site Items',
+    'mkt_partners-site-items.labels.title.singular' => 'Partner Site Item',
+    'mkt_partners-site-items.labels.add' => 'Add site item',
 ];
