@@ -13,6 +13,7 @@ use Marktic\Partners\AbstractBase\Models\PartnersRecord;
  *
  * @property int    $id
  * @property string $name
+ * @property int|null $id_site
  */
 class Category extends PartnersRecord
 {

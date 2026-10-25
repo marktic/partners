@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Marktic\Partners\Bundle\Controllers\Admin;
 
+use Marktic\Partners\Bundle\Forms\Admin\Partners\DetailsForm;
 use Nip\Controllers\Response\ResponsePayload;
 
 /**
@@ -15,5 +16,10 @@ trait PartnersControllerTrait
     {
         parent::indexPrepareItems($items);
         $items->loadRelation('category');
+    }
+
+    protected function getModelFormClass($model, $action = null): string
+    {
+        return DetailsForm::class;
     }
 }
